@@ -1,0 +1,155 @@
+    html,
+    body,
+    div,
+    section,
+    article,
+    aside,
+    header,
+    hgroup,
+    footer,
+    nav,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    address,
+    time,
+    span,
+    em,
+    strong,
+    img,
+    ol,
+    ul,
+    li,
+    figure,
+    canvas,
+    video,
+    th,
+    td,
+    tr,
+    a {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    h1 {
+        font-size: 12px;
+    }
+    /* Header */
+    
+    .logo {
+        float: left;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    .nav {
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+        width: 100%;
+        z-index: 3;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    nav ul {
+        list-style: none;
+        overflow: hidden;
+        background-color: #fff;
+        clear: both;
+        padding-top: 15px;
+    }
+    
+    .nav ul a {
+        text-decoration: none;
+        font-size: 13px;
+        color: #444444;
+        list-style: none;
+    }
+    
+    .nav .menu {
+        max-height: 0;
+        transition: max-height 0.4s ease-out;
+    }
+    
+    .nav .menu-icon {
+        margin-right: 5px;
+        position: relative;
+        float: right;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    
+    .nav .menu-btn {
+        display: none;
+    }
+    
+    .nav .menu-btn:checked~.menu {
+        max-height: 350px;
+    }
+    
+    .menu a {
+        text-align: center;
+    }
+    
+    .menu {
+        margin: auto;
+    }
+    /* Footer */
+    
+    footer {
+        margin-top: 70px;
+        background-color: rgba(0, 0, 0, .6);
+        padding: 30px;
+    }
+    
+    footer div {
+        clear: both;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    footer li {
+        display: inline-block;
+    }
+    
+    footer a {
+        margin: 20px;
+    }
+    /*index page*/
+    
+    .info-index {
+        clear: both;
+        margin: 50px auto 0px auto;
+        height: 200px;
+        width: 80%;
+        background-color: rgba(0, 0, 0, .4);
+    }
+    
+    @media only screen and (min-width: 769px) {
+        /*Header*/
+        .nav {
+            box-shadow: none;
+        }
+        .nav li {
+            display: inline-block;
+        }
+        .nav li a {
+            padding-left: 5px;
+            padding-right: 5px;
+            display: block;
+            font-size: 15px;
+        }
+        .nav .menu {
+            clear: none;
+            max-height: none;
+        }
+        .nav .menu-icon {
+            display: none;
+        }
+    }
