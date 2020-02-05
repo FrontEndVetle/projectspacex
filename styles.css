@@ -36,14 +36,25 @@
         border: 0;
         text-decoration: none;
         list-style: none;
+        color: #fff;
     }
     
     h1 {
         font-size: 12px;
+        color: #fff;
     }
     
     a:hover {
         font-weight: bold;
+    }
+    
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
     }
     /* Header */
     
@@ -68,7 +79,6 @@
     nav ul {
         list-style: none;
         overflow: hidden;
-        background-color: #fff;
         clear: both;
         padding-top: 15px;
     }
@@ -76,7 +86,6 @@
     .nav ul a {
         text-decoration: none;
         font-size: 13px;
-        color: #444444;
         list-style: none;
     }
     
@@ -91,6 +100,7 @@
         float: right;
         cursor: pointer;
         margin-top: 10px;
+        color: #fff;
     }
     
     .nav .menu-btn {
