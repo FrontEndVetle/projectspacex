@@ -41,7 +41,15 @@
     h1 {
         font-size: 12px;
     }
+    
+    a:hover {
+        font-weight: bold;
+    }
     /* Header */
+    
+    .active {
+        font-weight: bold;
+    }
     
     .logo {
         float: left;
@@ -133,6 +141,10 @@
     
     @media only screen and (min-width: 769px) {
         /*Header*/
+        header h1 {
+            font-size: 30px;
+            margin-left: 30px;
+        }
         .nav {
             box-shadow: none;
         }
