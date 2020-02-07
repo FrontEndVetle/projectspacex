@@ -36,8 +36,25 @@ a {
     border: 0;
     text-decoration: none;
     list-style: none;
-    color: #fff;
-    font-size: 10px;
+    color: rgb(230, 225, 225);
+    font-size: 12px;
+    text-shadow: black 1px 1px 2px;
+}
+
+
+/*headings*/
+
+h1 {
+    font-size: 18px;
+}
+
+h2,
+h3 {
+    font-size: 13px;
+}
+
+p {
+    font-size: 12px;
 }
 
 nav li {
@@ -237,10 +254,22 @@ s-icons {
     background-color: rgba(0, 0, 0, .1);
     color: #fff;
     padding: 5px;
+    cursor: pointer;
     ;
 }
 
 @media only screen and (min-width: 460px) and (max-width: 768px) {
+    /*headings*/
+    h1 {
+        font-size: 20px;
+    }
+    h2,
+    h3 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 15px;
+    }
     /*Header*/
     .logo {
         margin-left: 25%;
@@ -297,6 +326,17 @@ s-icons {
 }
 
 @media only screen and (min-width: 769px) {
+    /*headings*/
+    h1 {
+        font-size: 25px;
+    }
+    h2,
+    h3 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 15px;
+    }
     /*Header*/
     .logo {
         font-size: 25px;
