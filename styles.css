@@ -1,177 +1,359 @@
-    html,
-    body,
-    div,
-    section,
-    article,
-    aside,
-    header,
-    hgroup,
-    footer,
-    nav,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    address,
-    time,
-    span,
-    em,
-    strong,
-    img,
-    ol,
-    ul,
-    li,
-    figure,
-    canvas,
-    video,
-    th,
-    td,
-    tr,
-    a {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        text-decoration: none;
-        list-style: none;
-        color: #fff;
+html,
+body,
+div,
+section,
+article,
+aside,
+header,
+hgroup,
+footer,
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+time,
+span,
+em,
+strong,
+img,
+ol,
+ul,
+li,
+figure,
+canvas,
+video,
+th,
+td,
+tr,
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    font-size: 10px;
+}
+
+nav li {
+    margin-top: 10px;
+}
+
+a {
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -ms-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+    padding: 5px
+}
+
+a:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.back-image {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+
+/* Header */
+
+.active a {
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 11px;
+    margin-left: 5px;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.nav {
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    clear: both;
+    padding-top: 15px;
+}
+
+.nav .menu {
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+}
+
+.nav .menu-icon {
+    margin-right: 5px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.nav .menu-btn {
+    display: none;
+}
+
+.nav .menu-btn:checked~.menu {
+    max-height: 350px;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 70px;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 30px;
+}
+
+footer div {
+    clear: both;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer li {
+    display: block;
+    margin-top: 10px;
+}
+
+.s-icons {
+    width: 50%;
+    max-width: 50px;
+    margin: 10px;
+}
+
+@-webkit-keyframes pulse {
+    25% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
     }
-    
-    h1 {
-        font-size: 12px;
-        color: #fff;
+    75% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
     }
-    
-    a:hover {
-        font-weight: bold;
+}
+
+@keyframes pulse {
+    25% {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
     }
-    
-    #myVideo {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        z-index: -1;
+    75% {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
     }
-    /* Header */
-    
-    .active {
-        font-weight: bold;
-    }
-    
+}
+
+s-icons {
+    display: inline-block;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.s-icons:hover {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+
+/*index page*/
+
+.info-index {
+    clear: both;
+    margin: 100px auto 0px auto;
+    height: 200%;
+    width: 80%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+
+/*contact page*/
+
+.form-container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, .4);
+    text-align: center;
+    margin-top: 100px;
+    font-size: 12px;
+    padding: 2px;
+    border: solid #fff 2px;
+    line-height: 30px;
+}
+
+.form-input {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.form-button {
+    margin: 15px;
+    width: 70%;
+    background-color: rgba(0, 0, 0, .1);
+    color: #fff;
+    padding: 5px;
+    ;
+}
+
+@media only screen and (min-width: 460px) and (max-width: 768px) {
+    /*Header*/
     .logo {
-        float: left;
+        font-size: 20px;
+        margin-top: 20px;
         margin-bottom: 10px;
-        margin-top: 10px;
-    }
-    
-    .nav {
-        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-        width: 100%;
-        z-index: 3;
         text-align: center;
-        padding-bottom: 20px;
+        float: none;
     }
-    
-    nav ul {
-        list-style: none;
-        overflow: hidden;
+    .nav {
         clear: both;
-        padding-top: 15px;
+        box-shadow: none;
+        text-align: center;
     }
-    
-    .nav ul a {
-        text-decoration: none;
-        font-size: 13px;
-        list-style: none;
+    .nav li {
+        display: inline-block;
+        margin-top: 20px;
+        margin-right: 10px;
     }
-    
+    .nav li a {
+        padding-left: 5px;
+        padding-right: 5px;
+        display: block;
+        font-size: 11px;
+    }
     .nav .menu {
-        max-height: 0;
-        transition: max-height 0.4s ease-out;
+        clear: none;
+        max-height: none;
     }
-    
     .nav .menu-icon {
-        margin-right: 5px;
-        position: relative;
-        float: right;
-        cursor: pointer;
-        margin-top: 10px;
-        color: #fff;
-    }
-    
-    .nav .menu-btn {
         display: none;
     }
-    
-    .nav .menu-btn:checked~.menu {
-        max-height: 350px;
-    }
-    
-    .menu a {
-        text-align: center;
-    }
-    
-    .menu {
-        margin: auto;
-    }
     /* Footer */
-    
-    footer {
-        margin-top: 70px;
-        background-color: rgba(0, 0, 0, .6);
-        padding: 30px;
-    }
-    
-    footer div {
-        clear: both;
-        text-align: center;
-        margin-top: 30px;
-    }
-    
     footer li {
+        margin: 5px;
         display: inline-block;
     }
-    
-    footer a {
-        margin: 20px;
-    }
-    /*index page*/
-    
-    .info-index {
-        clear: both;
-        margin: 50px auto 0px auto;
-        height: 200px;
+    /*contact page*/
+    .form-container {
         width: 80%;
-        background-color: rgba(0, 0, 0, .4);
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 15px;
+        padding: 20px;
+        line-height: 40px;
     }
-    
-    @media only screen and (min-width: 769px) {
-        /*Header*/
-        header h1 {
-            font-size: 30px;
-            margin-left: 30px;
-        }
-        .nav {
-            box-shadow: none;
-        }
-        .nav li {
-            display: inline-block;
-        }
-        .nav li a {
-            padding-left: 5px;
-            padding-right: 5px;
-            display: block;
-            font-size: 15px;
-        }
-        .nav .menu {
-            clear: none;
-            max-height: none;
-        }
-        .nav .menu-icon {
-            display: none;
-        }
+    .form-input {
+        width: 50%;
     }
+    .form-button {
+        margin: 20px;
+        width: 50%;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    /*Header*/
+    .logo {
+        font-size: 25px;
+        margin-left: 2%;
+        margin-top: 30px;
+        margin-bottom: 150px;
+    }
+    .nav {
+        box-shadow: none;
+        text-align: right;
+    }
+    .nav li {
+        display: inline-block;
+        margin-top: 23px;
+        margin-right: 2%;
+    }
+    .nav li a {
+        padding-left: 5px;
+        padding-right: 5px;
+        display: block;
+        font-size: 13px;
+    }
+    .nav .menu {
+        clear: none;
+        max-height: none;
+    }
+    .nav .menu-icon {
+        display: none;
+    }
+    /* Footer */
+    footer {
+        margin-top: 150px;
+    }
+    footer li {
+        margin: 0px 60px 15px 0;
+        display: inline-block;
+    }
+    footer a {
+        font-size: 13px;
+    }
+    /*contact page*/
+    .form-container {
+        width: 30%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 150px;
+        font-size: 15px;
+        padding: 20px;
+        line-height: 40px;
+    }
+    .form-input {
+        width: 40%;
+    }
+    .form-button {
+        margin: 20px;
+        width: 40%;
+        padding: 10px;
+    }
+}
