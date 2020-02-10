@@ -169,9 +169,9 @@ footer li {
 }
 
 .s-icons {
-    width: 50%;
+    width: 20%;
     max-width: 50px;
-    margin: 10px;
+    margin: 7px;
 }
 
 @-webkit-keyframes pulse {
@@ -230,6 +230,11 @@ s-icons {
 
 
 /*contact page*/
+
+.error {
+    color: #fff;
+    display: none;
+}
 
 .form-container {
     width: 90%;
