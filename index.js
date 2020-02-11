@@ -19,9 +19,10 @@ fetch("https://api.spacexdata.com/v3/launches/next")
 
 function nextLaunchIs() {
     document.getElementById("nextLaunch").innerHTML =
-        "<p>THE NEXT SPACE<B>X</B> LAUNCH IS: <br>" +
+        "<h1>THE NEXT SPACE<B>X</B> LAUNCH IS:</h1> <p> <br> " +
+        " MISSION: " +
         nextLaunch.mission_name +
-        " " +
+        "<br> DATE: " +
         nextLaunch.launch_date_local +
         " </p> ";
 };
@@ -47,9 +48,10 @@ fetch("https://api.spacexdata.com/v3/launches/latest")
 
 function latestLaunchIs() {
     document.getElementById("latestLaunch").innerHTML =
-        "<p>MOST RECENT SPACE<B>X</B> LAUNCH IS: <br>" +
+        "<h2>THE LATEST SPACE<B>X</B> LAUNCH WAS: </h2><p><br>" +
+        " MISSION: " +
         latestLaunch.mission_name +
-        " " +
+        "<br> DATE: " +
         latestLaunch.launch_date_local +
         " </p> ";
 };

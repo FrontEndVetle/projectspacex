@@ -222,10 +222,25 @@ s-icons {
 
 .info-index {
     clear: both;
-    margin: 100px auto 0px auto;
-    height: 200%;
+    margin: 50px auto 0px auto;
     width: 80%;
-    background-color: rgba(0, 0, 0, .4);
+    padding: 10px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.info-index p {
+    font-size: 12px;
+}
+
+.next-launch {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.latest-launch {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, .7);
 }
 
 
@@ -328,6 +343,18 @@ s-icons {
         width: 50%;
         padding: 10px;
     }
+    /*index page */
+    .info-index {
+        margin: 150px auto 0px auto;
+        width: 35%;
+    }
+    .info-index p {
+        font-size: 18px;
+    }
+    .info-index h1,
+    h2 {
+        font-size: 15px;
+    }
 }
 
 @media only screen and (min-width: 769px) {
@@ -346,7 +373,7 @@ s-icons {
     .logo {
         font-size: 25px;
         margin-left: 2%;
-        margin-top: 30px;
+        margin-top: 35px;
         margin-bottom: 150px;
         width: 25%;
         max-width: 250px;
@@ -375,7 +402,7 @@ s-icons {
     }
     /* Footer */
     footer {
-        margin-top: 150px;
+        margin-top: 300px;
     }
     footer li {
         margin: 0px 60px 15px 0;
@@ -399,7 +426,28 @@ s-icons {
     }
     .form-button {
         margin: 20px;
-        width: 40%;
+        width: 50%;
         padding: 10px;
+    }
+    /*index page */
+    .info-index {
+        margin-top: 550px;
+    }
+    .next-launch {
+        float: left;
+        background-color: rgba(0, 0, 0, .7);
+        width: 28%;
+    }
+    .latest-launch {
+        float: right;
+        background-color: rgba(0, 0, 0, .7);
+        width: 28%;
+    }
+    .info-index h1,
+    h2 {
+        font-size: 25px;
+    }
+    .info-index p {
+        font-size: 18px;
     }
 }
