@@ -13,16 +13,16 @@ fetch("https://api.spacexdata.com/v3/launches/past")
 function loopThroughLaunched(launched) {
     launched.reverse();
     let missionimg = document.getElementById("gallerySlides");
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 5; i++) {
         missionimg.innerHTML +=
             "<article class='mission'>" +
             "<img src='" +
-            launched[i].links.flickr_images[0] +
+            launched[i].links.mission_patch_small +
             "' class='gallery-image' alt='image of mission rocket'>" +
             "<div class = 'caption'> <bar> " +
-            launched[i].mission_name[0] +
+            launched[i].mission_name +
             "</bar></div>" +
-            launched[i].launch_year[0] +
+            launched[i].launch_years +
             "  </article>";
     }
 
@@ -35,7 +35,10 @@ function loopThroughLaunched(launched) {
             let missionInfo = document.querySelector(".selected-mission");
             hideFilter.innerHTML = "";
             missionInfo.innerHTML =
-                "<div><img src='" +
+                "<h1> " +
+                filteredLaunch[0].mission_name +
+                "</h1>" +
+                "<div ><img src='" +
                 filteredLaunch[0].links.flickr_images[0] +
                 " alt = 'image of mission rocket'></div>";
         });
