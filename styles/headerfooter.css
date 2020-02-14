@@ -1,4 +1,5 @@
-//header nav
+/*header nav*/
+
 nav li {
     margin-top: 10px;
 }
@@ -80,7 +81,8 @@ nav li {
 /* Footer */
 
 footer {
-    margin-top: 70px;
+    clear: both;
+    margin-top: 100px;
     background-color: rgba(0, 0, 0, .6);
     padding: 30px;
 }
