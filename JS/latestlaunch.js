@@ -19,17 +19,18 @@ function loopThroughLaunched(launched) {
             "<img src='" +
             launched[i].links.mission_patch_small +
             "' class='gallery-image' alt='image of mission rocket'>" +
-            "<div class = 'caption'> <bar> " +
+            "<div class='mission-info'><h2>  " +
             launched[i].mission_name +
-            "</bar></div>" +
-            launched[i].launch_years +
+            "</h2><h3>LAUNCHED: " +
+            launched[i].launch_year +
+            "</H3><button>SELECT</button></div>" +
             "  </article>";
     }
 
     document.querySelectorAll(".mission").forEach(item => {
         item.addEventListener("click", function() {
             var filteredLaunch = launched.filter(
-                launch => launch.links.flickr_images[0] === item.firstChild.src
+                launch => launch.links.mission_patch_small === item.firstChild.src
             );
             var hideFilter = document.querySelector(".slider");
             let missionInfo = document.querySelector(".selected-mission");
