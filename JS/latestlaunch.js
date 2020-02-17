@@ -19,7 +19,7 @@ function loopThroughLaunched(launched) {
             "<img src='" +
             launched[i].links.mission_patch_small +
             "' class='gallery-image' alt='image of mission rocket'>" +
-            "<div class='mission-info'><h2>  " +
+            "<h2>" +
             launched[i].mission_name +
             "</h2><h3>LAUNCHED: " +
             launched[i].launch_year +
