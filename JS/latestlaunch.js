@@ -36,12 +36,32 @@ function loopThroughLaunched(launched) {
             let missionInfo = document.querySelector(".selected-mission");
             hideFilter.innerHTML = "";
             missionInfo.innerHTML =
-                "<h1> " +
+                "<div class='selected-wrapper'><h1> " +
                 filteredLaunch[0].mission_name +
                 "</h1>" +
-                "<div ><img src='" +
+                "<div class='selected_mission-container'><h2>MISSION INFO</H2><br>" +
+                "<p>ROCKET NAME: </P>" +
+                filteredLaunch[0].rocket.rocket_name +
+                "<p>LAUNCH DATE LOCAL: </P>" +
+                filteredLaunch[0].launch_date_local +
+                "<p>LAUNCH SITE: </P>" +
+                filteredLaunch[0].launch_site.site_name +
+                "<p>DETAILS: </P>" +
+                filteredLaunch[0].details +
+                "</div>" +
+                "<div class='selected_links-container'><img src='" +
                 filteredLaunch[0].links.flickr_images[0] +
-                " alt = 'image of mission rocket'></div>";
+                " alt = 'image of mission rocket'></div>" +
+                "<div class='selected_mission-container'><h3>MISSION INFO</H3><br>" +
+                "<p>WIKIPEDIA PAGE:  </P>" +
+                filteredLaunch[0].links.wikipedia +
+                "<p>YOUTUBE LAUNCH VIDEO: </P>" +
+                filteredLaunch[0].links.video_link +
+                "<p>ARTICLE: </P>" +
+                filteredLaunch[0].links.article_link +
+                "<p>DETAILS: </P>" +
+                "</div>"
+            "</div>";
         });
     });
 }
