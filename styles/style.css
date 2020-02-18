@@ -44,6 +44,13 @@ a {
 
 /*headings*/
 
+h1,
+h2,
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
 h1 {
     font-size: 18px;
 }
@@ -107,8 +114,11 @@ p {
 
 /*contact page*/
 
+.email-confirmation {
+    display: none;
+}
+
 .error {
-    color: #fff;
     display: none;
 }
 

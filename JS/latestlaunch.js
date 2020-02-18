@@ -18,7 +18,7 @@ function loopThroughLaunched(launched) {
             "<article class='mission'>" +
             "<img src='" +
             launched[i].links.mission_patch_small +
-            "' class='gallery-image' alt='image of mission rocket'>" +
+            "' class='gallery-image' alt='image of mission patch'>" +
             "<h2>" +
             launched[i].mission_name +
             "</h2><h3>LAUNCHED: " +
@@ -27,41 +27,66 @@ function loopThroughLaunched(launched) {
             "  </article>";
     }
 
+    //filter on the selected mission
     document.querySelectorAll(".mission").forEach(item => {
         item.addEventListener("click", function() {
-            var filteredLaunch = launched.filter(
+            let filteredLaunch = launched.filter(
                 launch => launch.links.mission_patch_small === item.firstChild.src
             );
-            var hideFilter = document.querySelector(".slider");
+            let hideFilter = document.querySelector(".slider");
             let missionInfo = document.querySelector(".selected-mission");
+
+            /* let imageUrl = filteredLaunch[0].links.flickr_images[0];
+
+
+             if image is not yet available or missing change to mission patch
+             if (imageUrl === undefined) {
+                 imageUrl = filteredLaunch[0].links.mission_patch;
+             }*/
+
+            //replace existing html with information about selected mission
             hideFilter.innerHTML = "";
             missionInfo.innerHTML =
                 "<div class='selected-wrapper'><h1> " +
                 filteredLaunch[0].mission_name +
                 "</h1>" +
                 "<div class='selected_mission-container'><h2>MISSION INFO</H2><br>" +
-                "<p>ROCKET NAME: </P>" +
+                "<p>ROCKET NAME: " +
                 filteredLaunch[0].rocket.rocket_name +
-                "<p>LAUNCH DATE LOCAL: </P>" +
+                "</p><p>LAUNCH DATE LOCAL: <br>" +
                 filteredLaunch[0].launch_date_local +
-                "<p>LAUNCH SITE: </P>" +
+                "</p><p>LAUNCH SITE: " +
                 filteredLaunch[0].launch_site.site_name +
-                "<p>DETAILS: </P>" +
+                "</p><div id='missionObjectiveTrigger'><p><button>OBJECTIVE</button></div>" +
+                "<div id='missionObjectiveInfo' style='display:none' class='mission-objective'>" +
                 filteredLaunch[0].details +
-                "</div>" +
-                "<div class='selected_links-container'><img src='" +
-                filteredLaunch[0].links.flickr_images[0] +
-                " alt = 'image of mission rocket'></div>" +
-                "<div class='selected_mission-container'><h3>MISSION INFO</H3><br>" +
-                "<p>WIKIPEDIA PAGE:  </P>" +
+                "</P></div></div>" +
+                "<div class='selected_video-container'><iframe width='560' height='315' " +
+                "class='selected-image' frameborder='0' " +
+                "src='https://www.youtube.com/embed/" +
+                filteredLaunch[0].links.youtube_id +
+                "' alt='image of mission rocket'></iframe></div>" +
+                "<div class='selected_links-container'><h3>LINKS</H3><br>" +
+                "<p>WIKIPEDIA PAGE:  <br><a href='" +
                 filteredLaunch[0].links.wikipedia +
-                "<p>YOUTUBE LAUNCH VIDEO: </P>" +
+                "'>Link to page</a></P><p>YOUTUBE LAUNCH VIDEO: </br><a href='" +
                 filteredLaunch[0].links.video_link +
-                "<p>ARTICLE: </P>" +
+                "'>Link to page</a></P><p>ARTICLE: </br><a href='" +
                 filteredLaunch[0].links.article_link +
-                "<p>DETAILS: </P>" +
+                "'>Link to page</a></P>" +
                 "</div>"
             "</div>";
+            document.getElementById('missionObjectiveTrigger').addEventListener('click', function() {
+
+                var toggleInfo = document.getElementById("missionObjectiveInfo");
+                if (toggleInfo.style.display === "block") {
+                    toggleInfo.style.display = "none";
+                } else {
+                    toggleInfo.style.display = "block";
+                }
+            });
         });
+
+
     });
 }

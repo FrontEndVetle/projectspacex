@@ -3,6 +3,54 @@
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
+    /*selected mission*/
+    
+    .mission-objective {
+        margin: 10px;
+    }
+    
+    .selected-wrapper {
+        clear: both;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 20px;
+    }
+    
+    .selected-wrapper button {
+        cursor: pointer;
+        width: 50%;
+        background-color: rgba(800, 800, 800, 0.7);
+        border: none;
+        color: black;
+        margin: 10px;
+    }
+    
+    .selected-wrapper button:hover {
+        background-color: rgba(800, 800, 800, 1);
+    }
+    
+    .selected-wrapper p {
+        margin: 20px;
+    }
+    
+    .selected_mission-container {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .selected_video-container {
+        width: 100%;
+    }
+    
+    .selected-image {
+        width: 100%;
+    }
+    
+    .selected_links-container {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-bottom: 50px;
+    }
     /*button*/
     
     article button {
@@ -231,6 +279,21 @@
     }
     
     @media only screen and (min-width: 460px) and (max-width: 768px) {
+        /*selected mission*/
+        .selected_mission-container {
+            width: 50%;
+            float: left;
+            margin-bottom: 30px;
+        }
+        .selected_video-container {
+            width: 45%;
+            float: right;
+        }
+        .selected_links-container {
+            float: right;
+            width: 45%;
+            margin-top: 20px;
+        }
         .gallery-container {
             height: 400px;
         }
@@ -265,13 +328,31 @@
     }
     
     @media only screen and (min-width: 769px) {
+        /*selected mission*/
+        .selected-wrapper {
+            width: 70%;
+            min-width: 760px;
+        }
+        .selected_mission-container {
+            width: 30%;
+            float: left;
+            margin-bottom: 100px;
+        }
+        .selected_video-container {
+            width: 35%;
+            float: left;
+            margin-left: 5%;
+        }
+        .selected_links-container {
+            width: 25%;
+            float: right;
+        }
         article img {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
         }
         .slider {
             width: 30%;
-            min-width: 600px;
         }
         .gallery-container {
             height: 550px;
