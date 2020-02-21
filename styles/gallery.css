@@ -6,7 +6,8 @@
     /*selected mission*/
     
     .mission-objective {
-        margin: 10px;
+        margin: 10px 0px;
+        width: 100%;
     }
     
     .selected-wrapper {
@@ -16,13 +17,18 @@
         line-height: 20px;
     }
     
+    .selected-wrapper h1 {
+        margin-bottom: 10%;
+    }
+    
     .selected-wrapper button {
         cursor: pointer;
-        width: 50%;
+        width: 100%;
         background-color: rgba(800, 800, 800, 0.7);
         border: none;
         color: black;
-        margin: 10px;
+        margin: 10px auto;
+        font-weight: bold;
     }
     
     .selected-wrapper button:hover {
@@ -37,12 +43,13 @@
         width: 100%;
         background-color: rgba(0, 0, 0, 0.7);
     }
+    /*video and image selected mission page*/
     
-    .selected_video-container {
+    .selected_media-container {
         width: 100%;
     }
     
-    .selected-image {
+    .selected-media {
         width: 100%;
     }
     
@@ -50,6 +57,16 @@
         width: 100%;
         background-color: rgba(0, 0, 0, 0.7);
         margin-bottom: 50px;
+        min-height: 250px;
+    }
+    
+    .selected_links-container a {
+        text-decoration: underline;
+    }
+    
+    .selected_links-container a:hover {
+        text-decoration: underline;
+        font-weight: bolder;
     }
     /*button*/
     
@@ -80,7 +97,8 @@
     
     label:hover,
     a:hover {
-        color: #ddd !important;
+        color: #fff;
+        cursor: pointer;
     }
     
     label,
@@ -161,7 +179,7 @@
         position: relative;
         z-index: 5;
         margin: 16% 0 0;
-        text-align: center
+        text-align: center;
     }
     
     #active label {
@@ -171,7 +189,7 @@
         display: inline-block;
         width: 10px;
         height: 10px;
-        background: rgba(14, 54, 45);
+        background: rgba(0, 0, 0, 0.7);
     }
     
     #active label:hover {
@@ -215,18 +233,6 @@
         background: #000;
         opacity: 0.6;
         border: 2px solid #fff;
-    }
-    
-    #slides {
-        position: relative;
-        padding: 2px;
-        margin: 20px 0 0;
-        -webkit-border-radius: 2px 2px 2px 2px;
-        -moz-border-radius: 2px 2px 2px 2px;
-        border-radius: 2px 2px 2px 2px;
-        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2)
     }
     
     #slides .inner {
@@ -284,15 +290,18 @@
             width: 50%;
             float: left;
             margin-bottom: 30px;
+            min-height: 315px;
         }
-        .selected_video-container {
+        .selected_media-container {
             width: 45%;
             float: right;
         }
         .selected_links-container {
-            float: right;
-            width: 45%;
+            clear: both;
             margin-top: 20px;
+        }
+        .selected_links-container p {
+            float: left;
         }
         .gallery-container {
             height: 400px;
@@ -337,8 +346,9 @@
             width: 30%;
             float: left;
             margin-bottom: 100px;
+            min-height: 270px;
         }
-        .selected_video-container {
+        .selected_media-container {
             width: 35%;
             float: left;
             margin-left: 5%;
@@ -346,6 +356,7 @@
         .selected_links-container {
             width: 25%;
             float: right;
+            min-height: 270px;
         }
         article img {
             width: 220px;
@@ -355,7 +366,7 @@
             width: 30%;
         }
         .gallery-container {
-            height: 550px;
+            height: 600px;
         }
         /* select button*/
         article button {

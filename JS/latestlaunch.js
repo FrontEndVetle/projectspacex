@@ -58,24 +58,25 @@ function loopThroughLaunched(launched) {
                 "</p><p>LAUNCH SITE: " +
                 filteredLaunch[0].launch_site.site_name +
                 "</p><div id='missionObjectiveTrigger'><p><button>OBJECTIVE</button></div>" +
-                "<div id='missionObjectiveInfo' style='display:none' class='mission-objective'>" +
+                "<div id='missionObjectiveInfo' style='display:none' class='mission-objective'><p>" +
                 filteredLaunch[0].details +
                 "</P></div></div>" +
-                "<div class='selected_video-container'><iframe width='560' height='315' " +
-                "class='selected-image' frameborder='0' " +
+                "<div class='selected_media-container'><iframe width='560' height='315' " +
+                "class='selected-media' frameborder='0' " +
                 "src='https://www.youtube.com/embed/" +
                 filteredLaunch[0].links.youtube_id +
                 "' alt='image of mission rocket'></iframe></div>" +
                 "<div class='selected_links-container'><h3>LINKS</H3><br>" +
                 "<p>WIKIPEDIA PAGE:  <br><a href='" +
                 filteredLaunch[0].links.wikipedia +
-                "'>Link to page</a></P><p>YOUTUBE LAUNCH VIDEO: </br><a href='" +
+                "'>link to site</a></P><p>VIEW ON YOUTUBE: </br><a href='" +
                 filteredLaunch[0].links.video_link +
-                "'>Link to page</a></P><p>ARTICLE: </br><a href='" +
+                "'>link to site</a></P><p>ARTICLE: </br><a href='" +
                 filteredLaunch[0].links.article_link +
-                "'>Link to page</a></P>" +
+                "'>link to site</a></P>" +
                 "</div>"
             "</div>";
+            //trigger more objective information on and off
             document.getElementById('missionObjectiveTrigger').addEventListener('click', function() {
 
                 var toggleInfo = document.getElementById("missionObjectiveInfo");

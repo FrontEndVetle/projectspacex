@@ -33,12 +33,13 @@ th,
 td,
 tr,
 a {
+    padding: 0;
     border: 0;
     text-decoration: none;
     list-style: none;
     color: rgb(230, 225, 225);
     font-size: 12px;
-    text-shadow: black 1px 1px 2px;
+    margin: 0;
 }
 
 
@@ -49,6 +50,7 @@ h2,
 h3 {
     text-align: center;
     text-transform: uppercase;
+    margin: 20px;
 }
 
 h1 {
@@ -62,12 +64,13 @@ h3 {
 
 p {
     font-size: 12px;
+    line-height: 20px;
 }
 
 
 /*video*/
 
-#myVideo {
+.index-video {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -97,10 +100,6 @@ p {
     line-height: 25px;
 }
 
-.info-index p {
-    font-size: 12px;
-}
-
 .next-launch {
     margin-top: 50px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -128,7 +127,6 @@ p {
     background-color: rgba(0, 0, 0, 0.4);
     text-align: center;
     margin-top: 100px;
-    font-size: 12px;
     padding: 2px;
     border: solid #fff 2px;
     line-height: 30px;
@@ -149,7 +147,113 @@ p {
 }
 
 
-/*Gallery*/
+/*About page and Timeline*/
+
+.about-container {
+    clear: both;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.about-text {
+    width: 100%;
+}
+
+.about-image {
+    width: 100%;
+}
+
+.timeline {
+    clear: both;
+    margin-top: 10%;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.timeline .timeline-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.timeline .timeline-container:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.achivement {
+    width: 100%;
+    float: left;
+}
+
+.timeline .achivement ul {
+    position: relative;
+    float: left;
+    width: 100%;
+    display: block;
+}
+
+.timeline .achivement ul:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    background-color: #ff56;
+}
+
+.timeline .achivement ul li:before {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #f71b1b;
+    box-shadow: 0 0 0 3px #f555557a;
+    top: 40px;
+}
+
+.timeline .achivement ul li:nth-child(odd):before {
+    right: 98%;
+}
+
+.timeline .achivement ul li:nth-child(even):before {
+    right: 98%;
+}
+
+.timeline .achivement ul li {
+    position: relative;
+    padding: 25px 5px;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.timeline .achivement ul li:nth-child(odd) {
+    float: left;
+    text-align: left;
+}
+
+.timeline .achivement ul li:nth-child(even) {
+    float: left;
+    text-align: left;
+}
+
+.timeline .achivement ul li .achivement-date {
+    padding: 5px 5px;
+    background-color: #f71b1b;
+    box-shadow: 0 0 0 3px #f555557a;
+    border-radius: 5%;
+}
+
+.timeline .achivement ul li:nth-child(odd) .achivement-date {
+    margin-left: 5px;
+}
+
+.timeline .achivement ul li:nth-child(even) .achivement-date {
+    margin-right: 5px;
+}
 
 @media only screen and (min-width: 460px) and (max-width: 768px) {
     /*headings*/
@@ -169,7 +273,6 @@ p {
         margin: 0 auto;
         text-align: center;
         margin-top: 100px;
-        font-size: 15px;
         padding: 20px;
         line-height: 40px;
     }
@@ -193,6 +296,16 @@ p {
     h2 {
         font-size: 15px;
     }
+    /*About page and Timeline*/
+    .about-container {
+        width: 300px;
+    }
+    .about-text {
+        width: 300px;
+    }
+    .about-image {
+        width: 300px;
+    }
 }
 
 @media only screen and (min-width: 769px) {
@@ -205,7 +318,7 @@ p {
         font-size: 18px;
     }
     p {
-        font-size: 15px;
+        font-size: 16px;
     }
     /*contact page*/
     .form-container {
@@ -227,23 +340,78 @@ p {
     }
     /*index page */
     .info-index {
-        margin-top: 550px;
+        width: 100%;
     }
     .next-launch {
-        float: left;
-        background-color: rgba(0, 0, 0, 0.7);
-        width: 28%;
-    }
-    .latest-launch {
         float: right;
         background-color: rgba(0, 0, 0, 0.7);
-        width: 28%;
+        width: 15%;
+    }
+    .latest-launch {
+        clear: both;
+        float: right;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 15%;
+        margin-bottom: 100px;
     }
     .info-index h1,
     h2 {
-        font-size: 25px;
+        font-size: 18px;
     }
     .info-index p {
-        font-size: 18px;
+        font-size: 15px;
+    }
+    /*About page and Timeline*/
+    .about-container {
+        width: 600px;
+    }
+    .about-text {
+        width: 40%;
+        float: left;
+    }
+    .about-image {
+        width: 45%;
+        float: right;
+        max-width: 240px;
+    }
+    .timeline .timeline-container {
+        width: 700px;
+    }
+    .timeline .achivement ul:before {
+        left: 50%;
+    }
+    .timeline .achivement ul li:before {
+        height: 16px;
+        width: 16px;
+        top: 50px;
+        margin-left: -27px;
+    }
+    .timeline .achivement ul li:nth-child(odd):before {
+        left: 105%;
+    }
+    .timeline .achivement ul li:nth-child(even):before {
+        left: 5%;
+    }
+    .timeline .achivement ul li {
+        padding: 30px 40px;
+        width: 50%;
+    }
+    .timeline .achivement ul li:nth-child(odd) {
+        text-align: right;
+    }
+    .timeline .achivement ul li:nth-child(even) {
+        float: right;
+        text-align: left;
+    }
+    .timeline .achivement ul li .achivement-date {
+        position: absolute;
+    }
+    .timeline .achivement ul li:nth-child(odd) .achivement-date {
+        left: 100%;
+        margin-left: 60px;
+    }
+    .timeline .achivement ul li:nth-child(even) .achivement-date {
+        right: 100%;
+        margin-right: 60px;
     }
 }
