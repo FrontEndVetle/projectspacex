@@ -43,11 +43,16 @@ a {
 }
 
 
-/*headings*/
+/*fonts*/
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
 
 h1,
 h2,
 h3 {
+    font-family: 'Space Mono', monospace;
     text-align: center;
     text-transform: uppercase;
     margin: 20px;
@@ -65,6 +70,11 @@ h3 {
 p {
     font-size: 12px;
     line-height: 20px;
+}
+
+.active {
+    font-weight: bold;
+    color: #fff;
 }
 
 
@@ -123,10 +133,9 @@ p {
 
 .form-container {
     width: 90%;
-    margin: 0 auto;
+    margin: 130px auto;
     background-color: rgba(0, 0, 0, 0.4);
     text-align: center;
-    margin-top: 100px;
     padding: 2px;
     border: solid #fff 2px;
     line-height: 30px;
@@ -270,9 +279,6 @@ p {
     /*contact page*/
     .form-container {
         width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 100px;
         padding: 20px;
         line-height: 40px;
     }
@@ -323,11 +329,7 @@ p {
     /*contact page*/
     .form-container {
         width: 30%;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 150px;
         font-size: 15px;
-        padding: 20px;
         line-height: 40px;
     }
     .form-input {
@@ -344,13 +346,11 @@ p {
     }
     .next-launch {
         float: right;
-        background-color: rgba(0, 0, 0, 0.7);
         width: 15%;
     }
     .latest-launch {
         clear: both;
         float: right;
-        background-color: rgba(0, 0, 0, 0.7);
         width: 15%;
         margin-bottom: 100px;
     }

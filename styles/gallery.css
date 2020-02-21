@@ -13,7 +13,7 @@
     .selected-wrapper {
         clear: both;
         width: 100%;
-        margin: 0 auto;
+        margin: 100px auto;
         line-height: 20px;
     }
     
@@ -26,7 +26,7 @@
         width: 100%;
         background-color: rgba(800, 800, 800, 0.7);
         border: none;
-        color: black;
+        color: #020202d1;
         margin: 10px auto;
         font-weight: bold;
     }
@@ -281,7 +281,7 @@
         max-width: 960px;
         width: 100%;
         text-align: center;
-        margin: 0 auto;
+        margin: 100px auto;
     }
     
     @media only screen and (min-width: 460px) and (max-width: 768px) {
@@ -364,6 +364,7 @@
         }
         .slider {
             width: 30%;
+            margin: 130px auto;
         }
         .gallery-container {
             height: 600px;
