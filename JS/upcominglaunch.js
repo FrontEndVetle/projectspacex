@@ -13,6 +13,9 @@ fetch('https://api.spacexdata.com/v3/launches/upcoming')
 function loopThroughLaunched(launched) {
     let missionimg = document.getElementById("gallerySlides");
     for (var i = 0; i < 5; i++) {
+        let strDate = launched[i].launch_date_local;
+        let newDate = strDate.substr(0, 10);
+
         missionimg.innerHTML +=
             "<article class='mission'>" +
             "<h2>" +
@@ -20,8 +23,8 @@ function loopThroughLaunched(launched) {
             "</h2>" +
             "<img src='/images/upcomingselect.jpg'" +
             "' class='gallery-image' alt='image of rocket launch'>" +
-            "<h3>LAUNCH YEAR: " +
-            launched[i].launch_year +
+            "<h3>LAUNCH date: " +
+            newDate +
             "</H3><button>SELECT</button></div>" +
             "  </article>";
     }
@@ -36,6 +39,9 @@ function loopThroughLaunched(launched) {
             let missionInfo = document.querySelector(".selected-mission");
 
             let coreReused = filteredLaunch[0].rocket.first_stage.cores[0].reused;
+
+            let strDate = filteredLaunch[0].launch_date_local;
+            let newDate = strDate.replace("T", "<br> LOCAL TIME: ");
 
             if (coreReused === true) {
                 coreReused = "First stage core is reused";
@@ -56,7 +62,7 @@ function loopThroughLaunched(launched) {
                 "<p>FLIGHT NUMBER: " +
                 filteredLaunch[0].flight_number +
                 "</p><p>LAUNCH DATE LOCAL: <br>" +
-                filteredLaunch[0].launch_date_local +
+                newDate +
                 "</p><p>LAUNCH SITE: " +
                 filteredLaunch[0].launch_site.site_name +
                 "</p></div>" +

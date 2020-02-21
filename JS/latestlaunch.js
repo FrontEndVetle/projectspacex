@@ -14,6 +14,8 @@ function loopThroughLaunched(launched) {
     launched.reverse();
     let missionimg = document.getElementById("gallerySlides");
     for (var i = 0; i < 5; i++) {
+        let strDate = launched[i].launch_date_local;
+        let newDate = strDate.substr(0, 10);
         missionimg.innerHTML +=
             "<article class='mission'>" +
             "<img src='" +
@@ -22,7 +24,7 @@ function loopThroughLaunched(launched) {
             "<h2>" +
             launched[i].mission_name +
             "</h2><h3>LAUNCHED: " +
-            launched[i].launch_year +
+            newDate +
             "</H3><button>SELECT</button></div>" +
             "  </article>";
     }
@@ -35,14 +37,8 @@ function loopThroughLaunched(launched) {
             );
             let hideFilter = document.querySelector(".slider");
             let missionInfo = document.querySelector(".selected-mission");
-
-            /* let imageUrl = filteredLaunch[0].links.flickr_images[0];
-
-
-             if image is not yet available or missing change to mission patch
-             if (imageUrl === undefined) {
-                 imageUrl = filteredLaunch[0].links.mission_patch;
-             }*/
+            let strDate = filteredLaunch[0].launch_date_local;
+            let newDate = strDate.replace("T", "<br> LOCAL TIME: ");
 
             //replace existing html with information about selected mission
             hideFilter.innerHTML = "";
@@ -54,7 +50,7 @@ function loopThroughLaunched(launched) {
                 "<p>ROCKET NAME: " +
                 filteredLaunch[0].rocket.rocket_name +
                 "</p><p>LAUNCH DATE LOCAL: <br>" +
-                filteredLaunch[0].launch_date_local +
+                newDate +
                 "</p><p>LAUNCH SITE: " +
                 filteredLaunch[0].launch_site.site_name +
                 "</p><div id='missionObjectiveTrigger'><p><button>OBJECTIVE</button></div>" +
