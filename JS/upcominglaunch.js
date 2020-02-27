@@ -32,7 +32,7 @@ function loopThroughLaunched(launched) {
             "<h2>" +
             launched[i].mission_name +
             "</h2>" +
-            "<img src='/images/upcomingselect.jpg'" +
+            "<img src='images/upcomingselect.jpg'" +
             "' class='gallery-image' alt='image of rocket launch'>" +
             "<h3>LAUNCH date: " +
             newDate +
@@ -50,7 +50,7 @@ function loopThroughLaunched(launched) {
             launched[i].launch_site.site_name +
             "</p></div>" +
             "<div class='selected_media-container'>" +
-            "<img src='/images/upcoming.jpg'" +
+            "<img src='images/upcoming.jpg'" +
             "class='selected-media'" +
             "' alt='image of mission rocket'></div>" +
             "<div class='selected_links-container'><h3>ROCKET INFO</H3><br>" +
@@ -64,8 +64,10 @@ function loopThroughLaunched(launched) {
             "<a href = 'https://en.wikipedia.org/wiki/SpaceX_launch_vehicles" +
             "'>Link to site</a></p>" +
             "</div>" +
-            "</div>"; +
-        "</section>";
+            "<a href='upcominglaunches.html'><button class='return-button'>" +
+            "return</button></a>" +
+            "</div>" +
+            "</section>";
     }
 
     //replace existing html with information about selected mission

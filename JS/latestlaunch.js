@@ -50,7 +50,7 @@ function loopThroughLaunched(launched) {
             newDate +
             "</p><p>LAUNCH SITE: " +
             launched[i].launch_site.site_name +
-            "</p><div class='missionObjectiveTrigger'><p><button>OBJECTIVE</button></div>" +
+            "</p><div class='missionObjectiveTrigger'><p><button class='objective-button'>OBJECTIVE</button></div>" +
             "<div style='display:none' class='mission-objective'><p>" +
             launched[i].details +
             "</P></div></div>" +
@@ -68,6 +68,8 @@ function loopThroughLaunched(launched) {
             launched[i].links.article_link +
             "'>link to site</a></P>" +
             "</div>" +
+            "<a href='latestlaunches.html'><button class='return-button'>" +
+            "return</button></a>" +
             "</div>" +
             "</section>";
     }

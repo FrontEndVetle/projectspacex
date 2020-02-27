@@ -1,5 +1,5 @@
-@import "/styles/headerfooter.css";
-@import "/styles/gallery.css";
+@import "headerfooter.css";
+@import "gallery.css";
 html,
 body,
 div,
@@ -37,7 +37,7 @@ a {
     border: 0;
     text-decoration: none;
     list-style: none;
-    color: #C4BABA;
+    color: #D0C8C8;
     margin: 0;
 }
 
