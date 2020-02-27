@@ -7,7 +7,7 @@ fetch("https://api.spacexdata.com/v3/history")
         loopThroughHistory(json);
     })
     .catch(function(error) {
-        console.log(error);
+        alert("could not load content");
     });
 
 
