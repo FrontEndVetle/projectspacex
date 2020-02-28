@@ -33,7 +33,7 @@ a:hover {
     float: left;
     margin-bottom: 10px;
     margin-top: 15px;
-    width: 105px;
+    width: 70%;
 }
 
 .nav {
@@ -57,7 +57,7 @@ nav li {
 
 .nav .menu {
     max-height: 0;
-    transition: max-height 0.4s ease-out;
+    transition: 0.4s ease-out;
 }
 
 .nav .menu-icon {
@@ -65,7 +65,7 @@ nav li {
     position: relative;
     float: right;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 14px;
     color: #fff;
 }
 
@@ -152,9 +152,9 @@ s-icons {
     /*Header*/
     .logo {
         margin-left: 25%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         margin-top: 15px;
-        width: 50%
+        width: 50%;
     }
     .nav {
         clear: both;
