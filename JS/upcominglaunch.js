@@ -37,14 +37,15 @@ function loopThroughLaunched(launched) {
             "<h3>LAUNCH date: " +
             newDate +
             "</H3><button>SELECT</button></div>" +
-            "  </article>" +
+            "</article>" +
             "<div class='selected-wrapper'><h2> " +
             launched[i].mission_name +
             "</h2>" +
             "<div class='selected_mission-container'><h3>MISSION INFO</H3><br>" +
             "<p>FLIGHT NUMBER: " +
             launched[i].flight_number +
-            "</p><p>LAUNCH DATE LOCAL: <br>" +
+            "</p>" +
+            "<p>LAUNCH DATE LOCAL: <br>" +
             newDateTime +
             "</p><p>LAUNCH SITE: " +
             launched[i].launch_site.site_name +
@@ -52,7 +53,8 @@ function loopThroughLaunched(launched) {
             "<div class='selected_media-container'>" +
             "<img src='images/upcoming.jpg'" +
             "class='selected-media'" +
-            "' alt='image of mission rocket'></div>" +
+            "' alt='image of mission rocket'>" +
+            "</div>" +
             "<div class='selected_links-container'><h3>ROCKET INFO</H3><br>" +
             "<p>ROCKET NAME: " +
             launched[i].rocket.rocket_name +

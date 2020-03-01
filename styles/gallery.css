@@ -3,6 +3,12 @@
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
+    /*images*/
+    
+    article img,
+    .about-image {
+        border-radius: 3%;
+    }
     /*selected mission*/
     
     .selected-wrapper {

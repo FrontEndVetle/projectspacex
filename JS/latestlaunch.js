@@ -50,10 +50,14 @@ function loopThroughLaunched(launched) {
             newDate +
             "</p><p>LAUNCH SITE: " +
             launched[i].launch_site.site_name +
-            "</p><div class='missionObjectiveTrigger'><p><button class='objective-button'>OBJECTIVE</button></div>" +
+            "</p>" +
+            "<div class='missionObjectiveTrigger'>" +
+            "<p><button class='objective-button'>OBJECTIVE</button>" +
+            "</div>" +
             "<div style='display:none' class='mission-objective'><p>" +
             launched[i].details +
-            "</P></div></div>" +
+            "</P></div>" +
+            "</div>" +
             "<div class='selected_media-container'><iframe width='560' height='315' " +
             "class='selected-media' frameborder='0' " +
             "src='https://www.youtube.com/embed/" +
