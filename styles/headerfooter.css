@@ -10,7 +10,7 @@ a {
     -ms-transition: all 0.7s ease-out;
     -o-transition: all 0.7s ease-out;
     transition: all 0.7s ease-out;
-    padding: 5px
+    padding: 5px;
 }
 
 a:hover {
@@ -33,7 +33,7 @@ a:hover {
     float: left;
     margin-bottom: 10px;
     margin-top: 15px;
-    width: 70%;
+    width: 40%;
 }
 
 .nav {
@@ -82,7 +82,7 @@ nav li {
 
 footer {
     width: 100%;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
     clear: both;
 }
 
