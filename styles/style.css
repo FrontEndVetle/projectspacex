@@ -193,6 +193,10 @@ p {
     margin-bottom: 100px;
 }
 
+.achivement {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .timeline .timeline-container {
     width: 100%;
     margin: 0 auto;
