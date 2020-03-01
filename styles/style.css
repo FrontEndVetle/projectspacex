@@ -41,6 +41,10 @@ a {
     margin: 0;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 
 /*fonts*/
 
@@ -159,7 +163,6 @@ img {
     background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
     padding: 5px;
-    cursor: pointer;
 }
 
 

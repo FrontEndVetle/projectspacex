@@ -26,7 +26,6 @@
     }
     
     .objective-button {
-        cursor: pointer;
         width: 100%;
         background-color: rgba(800, 800, 800, 0.7);
         border: none;
@@ -78,15 +77,10 @@
         padding: 3px;
     }
     
-    .return-button:hover {
-        cursor: pointer;
-    }
-    
     article button {
         margin-top: 40px;
         background: rgba(247, 68, 68, 0.6);
         padding: 12px;
-        cursor: pointer;
         border-radius: 50%;
         font-size: 12px;
         font-weight: bold;
@@ -212,7 +206,6 @@
         float: right;
         margin: -30% 5% 0 0px;
         display: block;
-        cursor: pointer;
         width: 40px;
     }
     
@@ -226,7 +219,6 @@
         float: left;
         margin: -30% 0 0 5%;
         display: block;
-        cursor: pointer;
         width: 40px;
     }
     
