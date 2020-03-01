@@ -84,10 +84,6 @@ p {
     color: #fff;
 }
 
-img {
-    border-radius: 3%;
-}
-
 
 /*video*/
 
@@ -167,6 +163,15 @@ img {
 
 
 /*About page and Timeline*/
+
+.back-top {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    bottom: 50%;
+    right: 52px;
+    display: none;
+}
 
 .about-container {
     width: 90%;
@@ -365,6 +370,9 @@ img {
         font-size: 18px;
     }
     /*About page and Timeline*/
+    .back-top {
+        display: block;
+    }
     .about-container {
         width: 600px;
     }
